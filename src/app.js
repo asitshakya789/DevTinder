@@ -7,18 +7,17 @@ const port = 5000;
 const  {adminauth , userauth} = require('./middlewares/auth');
 
 app.use('/admin', adminauth);
-app.use('/user', userauth);
 
-app.get('/user', (req, res) => {
-    res.send("user data sent ")
+app.post('/user/login',  (req, res) => {
+    res.send("user login successfull")
 });
 
-app.get('/admin/getalldata', (req, res) => {
-    res.send("admin data sent ")
+app.get('/user/data', userauth, (req, res) => {
+    res.send("user  data sent  ")
 });
 
 app.get('/admin/deleteuser ', (req, res) => {
-    res/send("user canbe deleted ")
+    res/send("user can be deleted ")
 });
 
 app.listen(port, () => {
