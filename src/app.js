@@ -1,56 +1,24 @@
-const express = require("express");
-
+const express = require('express');
 const app = express();
-const port = 3000;
 
-// // Home route
-// // this will match all the http methos  api calls to test
-// // this is the default route
-// // app.use("/", (req, res) => {
-// //     res.send("Hello World namaste from the deshbord");
-// //     res.send("Hello World");
-    
-// // });
-
-// app.use("/hello/2", (req, res) => {
-//     res.send("Hey there im asit kumar");
-// });
-// app.use("/hello/3", (req, res) => {
-//     res.send("hellow from the server")
-// });
+const port = 5000;
 
 
-// // About route
-// // this will only handle get call to /user
-// app.get("/about", (req, res) => {
-//     res.send({  firstname: "Asit", lastname: "Kumar" });
+const  {adminauth , userauth} = require('./middlewares/auth');
 
-// });
+app.use('/admin', adminauth);
+app.use('/user', userauth);
 
-// app.post("/post", (req, res) => {
-//     res.send("Testing post call");
-// });
-
-app.use("/user", (req, res) => {
-    res.send("Hello from the user");
+app.get('/user', (req, res) => {
+    res.send("user data sent ")
 });
 
-app.get("/user",  (req, res) => {
-    res.send({
-        name: "Asit Kumar",
-        age: 25,
-        city: "Uttar Pradesh"
-    });
-})
-
-
-app.post("/user", (req, res) => {
-    res.send("Post request is working fine");
-    res.send("saving data to the databses")
+app.get('/admin/getalldata', (req, res) => {
+    res.send("admin data sent ")
 });
 
-app.delete("/user", (req, res) => {
-    res.send("Delete request is working fine");
+app.get('/admin/deleteuser ', (req, res) => {
+    res/send("user canbe deleted ")
 });
 
 app.listen(port, () => {
