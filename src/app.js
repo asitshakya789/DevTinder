@@ -1,25 +1,36 @@
-const express = require('express');
+const express = require("express");
+
 const app = express();
+const connectDB = require("./config/database");
+const User = require("./models/user");
 
-const port = 5000;
+app.use(express.json()); // Middleware to parse JSON request bodies
 
+app.post("/signup", async (req, res) => {
+  try {
+    const user = new User({
+      firstname: "Asit",
+      lastname: "Kumar",
+      email: "techasit@gmail.com",
+      password: "123456",
+      age: 20,
+    });
 
-const  {adminauth , userauth} = require('./middlewares/auth');
-
-app.use('/admin', adminauth);
-
-app.post('/user/login',  (req, res) => {
-    res.send("user login successfull")
+    await user.save(); // Corrected the typo from `seve` to `save`
+    res.status(201).send("User created successfully");
+  } catch (error) {
+    console.error(error);
+    res.status(500).send("Error creating user");
+  }
 });
 
-app.get('/user/data', userauth, (req, res) => {
-    res.send("user  data sent  ")
-});
-
-app.get('/admin/deleteuser ', (req, res) => {
-    res/send("user can be deleted ")
-});
-
-app.listen(port, () => {
-    console.log(`Server is running on port ${port}`);
-});
+connectDB()
+  .then(() => {
+    console.log("Connected to MongoDB");
+    app.listen(3000, () => {
+      console.log("Server is running on port 3000");
+    });
+  })
+  .catch((err) => {
+    console.error("Database connection failed", err);
+  });
