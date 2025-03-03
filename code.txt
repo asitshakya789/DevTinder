@@ -1,0 +1,85 @@
+{
+  "workbench.colorTheme": "One Dark Pro",
+  "editor.fontFamily": "Fira Code, JetBrains Mono, Consolas, 'Courier New', monospace",
+  "editor.fontLigatures": true,
+  "editor.fontSize": 14,
+  "editor.lineHeight": 22,
+  "editor.cursorBlinking": "smooth",
+  "editor.cursorWidth": 3,
+  "editor.smoothScrolling": true,
+  "editor.minimap.enabled": true,
+  "editor.minimap.renderCharacters": false,
+  "editor.renderWhitespace": "all",
+  "editor.renderIndentGuides": true,
+  "editor.guides.indentation": true,
+  "editor.rulers": [80, 120],
+  "editor.codeLens": true,
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+  "editor.formatOnType": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 500,
+  "files.autoSaveOnFocusChange": true,
+  "files.autoSaveOnWindowChange": true,
+  "window.zoomLevel": 1,
+  "window.titleBarStyle": "custom",
+  "workbench.startupEditor": "newUntitledFile",
+  "workbench.iconTheme": "material-icon-theme",
+  "terminal.integrated.fontFamily": "Fira Code, JetBrains Mono, Consolas, 'Courier New', monospace",
+  "terminal.integrated.fontSize": 14,
+  "terminal.integrated.cursorStyle": "underline",
+  "terminal.integrated.smoothScrolling": true,
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "breadcrumbs.enabled": true,
+  "workbench.sideBar.location": "left",
+  "workbench.activityBar.visible": true,
+  "workbench.statusBar.visible": true,
+  "debug.console.fontSize": 14,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "extensions.ignoreRecommendations": false,
+  "git.autofetch": true,
+  "git.confirmSync": false,
+  "npm.enableScriptExplorer": true,
+  "npm.autoDetect": "on",
+  "terminal.integrated.defaultProfile.windows": "Git Bash",
+  "terminal.integrated.defaultProfile.linux": "bash",
+  "terminal.integrated.defaultProfile.osx": "zsh",
+  "terminal.integrated.env.windows": {
+    "NODE_ENV": "development"
+  },
+  "terminal.integrated.env.linux": {
+    "NODE_ENV": "development"
+  },
+  "terminal.integrated.env.osx": {
+    "NODE_ENV": "development"
+  },
+  "workbench.editor.enablePreview": false,
+  "terminal.integrated.shellIntegration.enabled": true,
+  "npm.packageManager": "npm",
+  "terminal.integrated.profiles.windows": {
+    "PowerShell": {
+      "path": "C:/Windows/System32/WindowsPowerShell/v1.0/powershell.exe"
+    },
+    "Git Bash": {
+      "path": "C:/Program Files/Git/bin/bash.exe"
+    }
+  },
+  "terminal.integrated.profiles.linux": {
+    "bash": {
+      "path": "/bin/bash"
+    }
+  },
+  "terminal.integrated.profiles.osx": {
+    "zsh": {
+      "path": "/bin/zsh"
+    }
+  },
+  "workbench.startupEditor": "welcomePage",
+  "terminal.integrated.inheritEnv": false,
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter-notebook"
+  }
+}

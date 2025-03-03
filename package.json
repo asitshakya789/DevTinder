@@ -3,11 +3,10 @@
   "version": "1.0.0",
   "description": "DEVELPER TINDER",
   "main": "index.js",
-"scripts": {
-  "start": "nodemon src/app.js",
-  "dev":"nodemon src/app.js"
-}
-,
+  "scripts": {
+    "start": "nodemon src/app.js",
+    "dev": "nodemon src/app.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/asitshakya789/DevTinder.git"
@@ -23,7 +22,10 @@
   },
   "homepage": "https://github.com/asitshakya789/DevTinder#readme",
   "dependencies": {
-    "express": "^4.21.2"
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "http": "^0.0.1-security",
+    "mongoose": "^8.12.0"
   },
   "devDependencies": {
     "nodemon": "^3.1.9"
