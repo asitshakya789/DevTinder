@@ -18,6 +18,9 @@ const userschema = mongoose.Schema({
   gender: {
     type: String,
   },
+  Branch: {
+    type: String,
+  }
 });
 
 module.exports = mongoose.model("User", userschema);
